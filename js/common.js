@@ -63,48 +63,95 @@ $(window).on('load', function () {
   });
 
   EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
-});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+});
 
-/*fadeinのjs*/
-$(function(){
-    $(window).scroll(function (){
-        $('.fadein').each(function(){
-            var targetElement = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 200){
-                $(this).css('opacity','1');
-                $(this).css('transform','translateY(0)');
-            }
+// スクロールイベント
+$(function () {
+  $(window).scroll(function () {
+    // フェードイン効果
+    $(".fadein").each(function () {
+      var targetElement = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight + 200) {
+        $(this).css({
+          opacity: "1",
+          transform: "translateY(0)",
         });
+      }
     });
-});
-jQuery(window).on("scroll", function() {
-	documentHeight = jQuery(document).height();
-	scrollPosition = jQuery(this).height() + jQuery(this).scrollTop();
-	footerHeight = jQuery("#footer").innerHeight();
 
-	if (documentHeight - scrollPosition <= footerHeight) {
-		jQuery(".link").css({
-			position: "absolute",
-			bottom: footerHeight + 10
-		});
-	} else {
-		jQuery(".link").css({
-			position: "fixed",
-			bottom: 10
-		});
-	}
+    // Footer付近での位置調整
+    let documentHeight = $(document).height();
+    let scrollPosition = $(window).height() + $(window).scrollTop();
+    let footerHeight = $("#footer").innerHeight();
+
+    if (documentHeight - scrollPosition <= footerHeight) {
+      $("#sns").css({
+        position: "absolute",
+        bottom: footerHeight + 10,
+        left: "10px", // 左寄せを維持
+      });
+    } else {
+      $("#sns").css({
+        position: "fixed",
+        bottom: "10px",
+        left: "10px", // 左寄せを維持
+      });
+    }
+  });
+
+  // スクロール位置でsnsの表示/非表示を切り替え
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 100) {
+      $("#sns").fadeIn(); // #sns全体を表示
+    } else {
+      $("#sns").fadeOut(); // #sns全体を非表示
+    }
+  });
 });
 
-jQuery(window).on("scroll", function() {
-	if (100 < jQuery(this).scrollTop()) {
-		jQuery(".link").css({
-			display: "block",
-		});
-	} else {
-		jQuery(".link").css({
-			display: "none",
-		});
-	}
-});
+
+// /*fadeinのjs*/
+// $(function(){
+//     $(window).scroll(function (){
+//         $('.fadein').each(function(){
+//             var targetElement = $(this).offset().top;
+//             var scroll = $(window).scrollTop();
+//             var windowHeight = $(window).height();
+//             if (scroll > targetElement - windowHeight + 200){
+//                 $(this).css('opacity','1');
+//                 $(this).css('transform','translateY(0)');
+//             }
+//         });
+//     });
+// });
+// jQuery(window).on("scroll", function() {
+// 	documentHeight = jQuery(document).height();
+// 	scrollPosition = jQuery(this).height() + jQuery(this).scrollTop();
+// 	footerHeight = jQuery("#footer").innerHeight();
+
+// 	if (documentHeight - scrollPosition <= footerHeight) {
+// 		jQuery(".link").css({
+// 			position: "absolute",
+// 			bottom: footerHeight + 10
+// 		});
+// 	} else {
+// 		jQuery(".link").css({
+// 			position: "fixed",
+// 			bottom: 10
+// 		});
+// 	}
+// });
+
+// jQuery(window).on("scroll", function() {
+// 	if (100 < jQuery(this).scrollTop()) {
+// 		jQuery(".link").css({
+// 			display: "block",
+// 		});
+// 	} else {
+// 		jQuery(".link").css({
+// 			display: "none",
+// 		});
+// 	}
+// });
