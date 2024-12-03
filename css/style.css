@@ -710,8 +710,8 @@ p.right {
   }
   
   .link img {
-	width: 100%;  
-	height: auto; 
+	width: 400px;  
+	height:100px; 
 	object-fit: contain;
   }
   
@@ -729,23 +729,31 @@ footer img{
 /* スマートフォン時のスタイル */
 @media (max-width: 768px) {
 	#sns {
-	  left: 0; /* 左右中央揃えのためリセット */
-	  right: 0; /* 両端をリセット */
-	  bottom: 0; /* 最下部に固定 */
-	  display: flex;
-	  justify-content: center; /* 横並びの中央揃え */
-	  padding: 10px 0; /* ボタンと画面の間に余白 */
-	  background: rgba(0, 0, 0, 0.5); /* 背景を半透明にする場合 */
+	  left: 0; 
+	  right: 0; 
+	  bottom: 0; 
+	  background: rgba(0, 0, 0, 0.5); 
 	}
   
 	#sns .flex {
-	  flex-direction: row; /* 横並び */
-	  justify-content: space-around; /* 均等配置 */
-	  width: 100%; /* 横幅を全体に広げる */
+	flex-wrap: nowrap;
+	flex-direction: row; /* 横並び */
+	justify-content: space-around; /* 均等配置 */
+	width: 100%; /* 横幅を全体に広げる */
 	}
   
 	.link.insta {
 	  width: 35%; /* insta の横幅 */
+	}
+
+	.link.line {
+		width: 65%; /* insta の横幅 */
+	  }
+
+	.link.img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 	}
 }
 
