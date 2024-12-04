@@ -290,6 +290,7 @@ height: auto;*/
 	background-color: rgba(255, 249, 251, 0.6); 
 	width: 100%;
 	position: relative; 
+	box-sizing: border-box;
 	padding-right: 30px; 
   }
   
@@ -758,38 +759,53 @@ lineバナー
   
 /* スマートフォン時のスタイル */
 @media (max-width: 768px) {
-	#sns {
-	  left: 0; 
-	  right: 0; 
-	  bottom: 0; 
-	  background: rgba(0, 0, 0, 0.5); 
-	  z-index: 0;
-	}
-  
-	#sns .flex {
-	flex-wrap: nowrap;
-	flex-direction: row; 
-	justify-content: space-around;
-	width: 100%; /* 横幅を全体に広げる */
-	}
-  
-	.link.insta {
-	  width: 32%; /* insta の横幅 */
-	}
 
-	.link.line {
-		width: 65%; /* insta の横幅 */
+	#sns {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 0;
 	  }
 
-	.link.img{
-	width: auto;
-	height: auto;
-	object-fit: contain;
+	  #sns .flex {
+	  flex-wrap: nowrap;
+	  flex-direction: row;
+	  justify-content: space-around;
+	  width: 100%;
+	  }
+
+	  .link.insta {
+		width: 32%; /* insta の横幅 */
+	  }
+	  .link.line {
+		  width: 65%; /* insta の横幅 */
+		}
+
+	section#sns {
+		left: 0;
+		padding: 10px 10px 0;
+		box-sizing: border-box;
+	  }
+	
+	  .insta img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	  }
+	  .link img {
+		width: 100%;
+		height: auto;
+	  }
+	  
+	#scroll-top {
+		bottom: 110px;
 	}
 
-	#scroll-top {
-		bottom: 140px;
-	}
+	.recruiting_list a {
+		font-size: 0.85rem; 
+	  }
+
 }
 
 @media(max-width:1215px){
