@@ -700,6 +700,10 @@ p.right {
 	align-items: flex-start; 
 	gap: 10px; 
   }
+
+  #sns .spimg{
+	display: none;
+  }
   
   .link {
 	display: block;
@@ -765,13 +769,24 @@ lineバナー
 		right: 0;
 		bottom: 0;
 		z-index: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	  }
+
+	  #sns .spimg{
+		display: block;
 	  }
 
 	  #sns .flex {
+	display: flex;
 	  flex-wrap: nowrap;
 	  flex-direction: row;
 	  justify-content: space-around;
 	  width: 100%;
+	  gap:5px;
+	  }
+
+	  #sns .pcimg{
+		display: none;
 	  }
 
 	  .link.insta {
