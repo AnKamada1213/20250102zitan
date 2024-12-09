@@ -60,6 +60,50 @@ src="https://www.facebook.com/tr?id=1912850532422946&ev=PageView&noscript=1"
 
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN0PVF74FC"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-PN0PVF74FC'); </script>
 <!-- Event snippet for ライン公式 conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --><script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-372333906/Zcv9CP2Fs6kYENK6xbEB', 'event_callback': callback }); return false; } </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-372333906"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-372333906');
+</script>
+<!-- Event snippet for ライン公式 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion_line(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-372333906/Zcv9CP2Fs6kYENK6xbEB',
+        'event_callback': callback
+    });
+    return false;
+  }
+</script>  
+<!-- Event snippet for インスタ公式 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion_instagram(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-372333906/_FuICOqM8_QZENK6xbEB',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
+  
 </head>
 <header class="header">福岡美髪研究所Knops</header>
 <body>
@@ -203,7 +247,7 @@ src="https://www.facebook.com/tr?id=1912850532422946&ev=PageView&noscript=1"
     </div>
 
     <div class="line3" >
-      <a href="https://page.line.me/814xqnje?oat_content=url&openQrModal=true" target="_blank">
+      <a href="https://lin.ee/9DUbtBu"  onclick="return gtag_report_conversion_line('https://lin.ee/9DUbtBu');" target="_blank">
           <img src="img/line4.png" alt="Line">
       </a>
   </div>
@@ -430,22 +474,22 @@ src="https://www.facebook.com/tr?id=1912850532422946&ev=PageView&noscript=1"
   <section id="sns">
     <div class="flex pcimg">
       <div class="link insta">
-        <a onclick="return gtag_report_conversion('https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw==');" href="https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw=="><img src="img/insta2.png" alt="">
+        <a onclick="return gtag_report_conversion_instagram('https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw==');" href="https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw=="><img src="img/insta2.png" alt="">
         </a>
       </div>
       <div class="link line">
-        <a onclick="return gtag_report_conversion('https://lin.ee/9DUbtBu');" href="https://lin.ee/9DUbtBu">
+        <a onclick="return gtag_report_conversion_line('https://lin.ee/9DUbtBu');" href="https://lin.ee/9DUbtBu">
           <img src="img/line2.png" alt="">
         </a></div>
     </div>
 
     <div class="flex spimg">
       <div class="link insta">
-        <a onclick="return gtag_report_conversion('https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw==');" href="https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw=="><img src="img/insta4.png" alt="">
+        <a onclick="return gtag_report_conversion_instagram('https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw==');" href="https://www.instagram.com/bigami.recruit/profilecard/?igsh=MWZoMHBkbDQwZmlnMw=="><img src="img/insta4.png" alt="">
         </a>
       </div>
       <div class="link line">
-        <a onclick="return gtag_report_conversion('https://lin.ee/9DUbtBu');" href="https://lin.ee/9DUbtBu">
+        <a onclick="return gtag_report_conversion_line('https://lin.ee/9DUbtBu');" href="https://lin.ee/9DUbtBu">
           <img src="img/line5.png" alt="">
         </a></div>
     </div>
